@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>cruds</title>
+</head>
+<body>
+    <header>
+        <h2>cruds</h2>
+        <p>useful for managment systems</p>
+    </header>
+    <div class="inputs">
+            <input type="text"  id="title" placeholder="title">
+            <input onkeyup="getTotle()" type="number"id="price"placeholder="price">
+            <input onkeyup="getTotle()" type="number"id="taxes"placeholder="taxes">
+            <input onkeyup="getTotle()" type="number"id="ads"placeholder="ads">
+            <input onkeyup="getTotle()" type="number"id="discount"placeholder="discount">
+            <small class="total"></small>
+            <input type="number" id="count" placeholder="count">
+            <input type="text" id="category" placeholder="category">
+            <button class="create">create</button>
+    </div>
+    <div class="outputs">
+        <input onkeyup="searchdata(this.value)" type="text" id="search" placeholder="search">
+        <button onclick="searchbox.focus();searchbox.placeholder='search by title';search(this.id) " class="search" id="s1">search by title</button>
+        <button onclick="searchbox.focus();searchbox.placeholder='search by category'; search(this.id)" class="search" id="s2">search by category</button>
+        <table>
+            <thead>
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>total</th>
+                <th>category</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </div> 
+    <script src="jsfile.js"></script>
+</body>
+</html>

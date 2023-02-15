@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #333;
+    min-height: 100vh;
+}
+header{
+    width: 80%;
+    text-align: center;
+    color: #fff;
+    margin: 10px auto;
+}
+header h2{
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.inputs{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-areas: "title title title title title title title title title title" 
+    "price price taxes taxes  ads ads discount discount total total"
+    "count count count count count count count count count count"
+    "category category category category category category category category category category"
+    "create create create create create create create create create create";
+    
+    gap: 7px;
+}
+.inputs{
+    margin: 0 40px;
+}
+input{
+    background-color: #222;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    caret-color: #fff;
+    color: #fff;
+    transition: all .4s ease;
+}
+input#title{
+    grid-area: title;
+}
+input#price{
+grid-area: price;
+}
+input#taxes{
+grid-area: taxes;
+}
+input#ads{
+grid-area: ads;
+}
+input#discount{
+grid-area: discount;
+}
+small.total{
+grid-area: total;
+pointer-events: none;
+    background: red;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    color: white;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        text-align: left;
+            padding: 0 7px 0 7px;
+}
+small.total::before{
+    content: 'total: ';
+}
+input#count{
+   grid-area: count; 
+}
+input#category{
+    grid-area: category;
+}
+.create{
+    grid-area: create;
+    height: 40px;
+    background-color: rgb(62, 4, 71);
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    transition: all .4s ease;
+    font-weight: 600;
+}
+.create:hover{
+    background-color: rgb(204, 12, 194);
+    letter-spacing: 1px;
+}
+.outputs{
+gap: 7px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px 40px 0;
+}
+.outputs #search{
+grid-column: 1/3;
+}
+.outputs .search{
+height: 40px;
+    background-color: rgb(62, 4, 71);
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    transition: all .4s ease;
+    font-weight: 600;
+    padding: 5px;
+    white-space: nowrap;
+}
+.search:hover{
+    background-color: rgb(204, 12, 194);
+        letter-spacing: 1px;
+}
+
+input:hover{
+    background-color: #000;
+    transform: scale(1.04);
+}
+table{
+    grid-column: 1/span 2;
+    text-align: center;
+        color: #fff;
+}
+table thead{
+    text-transform: uppercase;
+    color:#fff;
+    font-size: 1.2em;
+}
+table button{
+background-color: rgb(62, 4, 71);
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    transition: all .4s ease;
+    font-weight: 600;
+    padding: 7px;
+    white-space: nowrap;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+table button:hover{
+background-color: rgb(204, 12, 194);
+    letter-spacing: 1px;
+}
+table th, table td{
+    padding: 5px;
+}
+button{
+    background-color: rgb(62, 4, 71);
+        color: #fff;
+        outline: none;
+        border: none;
+        border-radius: 30px;
+        transition: all .4s ease;
+        font-weight: 600;
+        padding: 7px;
+        white-space: nowrap;
+        font-size: 18px;
+        text-transform: capitalize;
+}
+button:hover{
+    background-color: rgb(204, 12, 194);
+        letter-spacing: 1px;
+}
+input:focus{
+background-color: #000;
+    transform: scale(1.04);
+}
